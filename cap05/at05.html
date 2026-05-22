@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    PWEB1 — Cap. 05 — AT05 — Pesquisa Acadêmica
+  </title>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>
+      Pesquisa Acadêmica
+    </h1>
+
+    <p>
+
+      <a href="../index.html">
+
+        ← Voltar para a página principal
+
+      </a>
+
+    </p>
+
+  </header>
+
+  <main>
+
+    <p>
+      * Campos obrigatórios
+    </p>
+
+    <form
+      action="http://localhost:3000/cadastro"
+      method="post"
+      novalidate>
+
+      <!-- ====================== -->
+      <!-- PERFIL -->
+      <!-- ====================== -->
+
+      <fieldset>
+
+        <legend>
+          Perfil do estudante
+        </legend>
+
+        <p>
+
+          <label for="nome">
+            Nome completo *
+          </label>
+
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            autocomplete="name"
+            aria-required="true"
+            required>
+
+        </p>
+
+        <p>
+
+          <label for="cpf">
+            CPF completo *
+          </label>
+
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            placeholder="000.000.000-00"
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            aria-required="true"
+            required>
+
+        </p>
+
+        <p>
+
+          <label for="matricula">
+            Matrícula *
+          </label>
+
+          <input
+            type="text"
+            id="matricula"
+            name="matricula"
+            pattern="\d{7}"
+            aria-required="true"
+            required>
+
+        </p>
+
+        <p>
+
+          <label for="email">
+            E-mail institucional *
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            pattern="[a-zA-Z0-9._%+\-]+@ifal\.edu\.br"
+            aria-required="true"
+            aria-invalid="false"
+            aria-describedby="erro-email"
+            onblur="validarEmail(this)"
+            required>
+
+        </p>
+
+        <p
+          id="erro-email"
+          role="alert"></p>
+
+        <p>
+
+          <label for="periodo">
+            Período
+          </label>
+
+          <select
+            id="periodo"
+            name="periodo">
+
+            <option>1º período</option>
+            <option>2º período</option>
+            <option>3º período</option>
+            <option>4º período</option>
+            <option>5º período</option>
+            <option>6º período</option>
+            <option>7º período</option>
+            <option>8º período</option>
+
+          </select>
+
+        </p>
+
+        <!-- Turno -->
+
+        <fieldset>
+
+          <legend>
+            Turno
+          </legend>
+
+          <input
+            type="radio"
+            id="manha"
+            name="turno"
+            value="manha">
+
+          <label for="manha">
+            Manhã
+          </label>
+
+          <br>
+
+          <input
+            type="radio"
+            id="tarde"
+            name="turno"
+            value="tarde">
+
+          <label for="tarde">
+            Tarde
+          </label>
+
+          <br>
+
+          <input
+            type="radio"
+            id="noite"
+            name="turno"
+            value="noite">
+
+          <label for="noite">
+            Noite
+          </label>
+
+        </fieldset>
+
+      </fieldset>
+
+      <!-- ====================== -->
+      <!-- PERFIL TECNOLÓGICO -->
+      <!-- ====================== -->
+
+      <fieldset>
+
+        <legend>
+          Perfil tecnológico
+        </legend>
+
+        <p>
+          Tecnologias que conhece:
+        </p>
+
+        <input type="checkbox" id="html" name="tecnologias[]" value="HTML">
+        <label for="html">HTML</label>
+
+        <br>
+
+        <input type="checkbox" id="css" name="tecnologias[]" value="CSS">
+        <label for="css">CSS</label>
+
+        <br>
+
+        <input type="checkbox" id="js" name="tecnologias[]" value="JavaScript">
+        <label for="js">JavaScript</label>
+
+        <br>
+
+        <input type="checkbox" id="python" name="tecnologias[]" value="Python">
+        <label for="python">Python</label>
+
+        <br>
+
+        <input type="checkbox" id="java" name="tecnologias[]" value="Java">
+        <label for="java">Java</label>
+
+        <br>
+
+        <input type="checkbox" id="arduino" name="tecnologias[]" value="Arduino">
+        <label for="arduino">Arduino</label>
+
+        <p>
+
+          <label for="linguagem">
+            Linguagem favorita:
+          </label>
+
+          <select
+            id="linguagem"
+            name="linguagem">
+
+            <optgroup label="Orientada a Objetos">
+
+              <option>Java</option>
+              <option>C#</option>
+
+            </optgroup>
+
+            <optgroup label="Script">
+
+              <option>JavaScript</option>
+              <option>Python</option>
+
+            </optgroup>
+
+          </select>
+
+        </p>
+
+        <p>
+
+          <label for="anos">
+            Anos de experiência:
+          </label>
+
+          <input
+            type="number"
+            id="anos"
+            name="anos"
+            min="0"
+            max="30">
+
+        </p>
+
+        <p>
+
+          <label for="portfolio">
+            Portfólio ou LinkedIn:
+          </label>
+
+          <input
+            type="url"
+            id="portfolio"
+            name="portfolio"
+            placeholder="https://">
+
+        </p>
+
+      </fieldset>
+
+      <!-- ====================== -->
+      <!-- AVALIAÇÃO -->
+      <!-- ====================== -->
+
+      <fieldset>
+
+        <legend>
+          Avaliação da disciplina
+        </legend>
+
+        <p>
+
+          <label for="nota">
+
+            Nota da disciplina:
+            <span id="valor-nota">5</span>
+
+          </label>
+
+          <input
+            type="range"
+            id="nota"
+            name="nota"
+            min="0"
+            max="10"
+            value="5"
+            oninput="document.getElementById('valor-nota').textContent = this.value">
+
+        </p>
+
+        <!-- Satisfação -->
+
+        <fieldset>
+
+          <legend>
+            Satisfação
+          </legend>
+
+          <input type="radio" id="ms" name="satisfacao" value="muito_satisfeito">
+          <label for="ms">Muito satisfeito</label>
+
+          <br>
+
+          <input type="radio" id="s" name="satisfacao" value="satisfeito">
+          <label for="s">Satisfeito</label>
+
+          <br>
+
+          <input type="radio" id="n" name="satisfacao" value="neutro">
+          <label for="n">Neutro</label>
+
+          <br>
+
+          <input type="radio" id="i" name="satisfacao" value="insatisfeito">
+          <label for="i">Insatisfeito</label>
+
+          <br>
+
+          <input type="radio" id="mi" name="satisfacao" value="muito_insatisfeito">
+          <label for="mi">Muito insatisfeito</label>
+
+        </fieldset>
+
+        <br>
+
+        <p>
+
+          <label for="sugestoes">
+            Sugestões:
+          </label>
+
+          <textarea
+            id="sugestoes"
+            name="sugestoes"
+            maxlength="1000"
+            rows="6"></textarea>
+
+        </p>
+
+        <p>
+
+          <label for="data_preenchimento">
+            Data de preenchimento *
+          </label>
+
+          <input
+            type="date"
+            id="data_preenchimento"
+            name="data_preenchimento"
+            aria-required="true"
+            required>
+
+        </p>
+
+      </fieldset>
+
+      <!-- ====================== -->
+      <!-- CONSENTIMENTO -->
+      <!-- ====================== -->
+
+      <fieldset>
+
+        <legend>
+          Consentimento e envio
+        </legend>
+
+        <input
+          type="checkbox"
+          id="consentimento"
+          name="consentimento"
+          required>
+
+        <label for="consentimento">
+          Autorizo o uso dos dados
+        </label>
+
+        <input
+          type="hidden"
+          name="pesquisa_id"
+          value="PWEB1-2026-1">
+
+      </fieldset>
+
+      <br>
+
+      <button type="submit">
+        Enviar pesquisa
+      </button>
+
+    </form>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

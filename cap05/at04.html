@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    PWEB1 — Cap. 05 — AT04 — Inscrição em Evento
+  </title>
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Semana de Tecnologia IFAL</h1>
+
+    <p>
+      <a href="../index.html">
+        ← Voltar para a página principal
+      </a>
+    </p>
+
+  </header>
+
+  <main>
+
+    <form
+      action="https://httpbin.org/post"
+      method="post"
+      enctype="multipart/form-data">
+
+      <!-- Campo oculto -->
+      <input
+        type="hidden"
+        name="edicao"
+        value="2026">
+
+      <!-- Nome -->
+      <p>
+
+        <label for="nome">
+          Nome completo:
+        </label>
+
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          required>
+
+      </p>
+
+      <!-- Email -->
+      <p>
+
+        <label for="email">
+          E-mail institucional:
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required>
+
+      </p>
+
+      <!-- Cidade -->
+      <p>
+
+        <label for="cidade">
+          Cidade de origem:
+        </label>
+
+        <input
+          type="text"
+          id="cidade"
+          name="cidade"
+          list="cidades">
+
+        <datalist id="cidades">
+          <option value="Maceió">
+          <option value="Arapiraca">
+          <option value="Rio Largo">
+          <option value="Palmeira dos Índios">
+          <option value="Maragogi">
+          <option value="Penedo">
+          <option value="União dos Palmares">
+          <option value="Delmiro Gouveia">
+        </datalist>
+
+      </p>
+
+      <!-- Upload -->
+      <p>
+
+        <label for="foto">
+          Foto para crachá:
+        </label>
+
+        <input
+          type="file"
+          id="foto"
+          name="foto"
+          accept="image/jpeg,image/png"
+          aria-describedby="info-foto">
+
+        <small id="info-foto">
+          Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.
+        </small>
+
+      </p>
+
+      <!-- Data -->
+      <p>
+
+        <label for="chegada">
+          Data e hora de chegada:
+        </label>
+
+        <input
+          type="datetime-local"
+          id="chegada"
+          name="chegada">
+
+      </p>
+
+      <!-- Range -->
+      <p>
+
+        <label for="experiencia">
+          Nível de experiência:
+          <span id="valor-experiencia">5</span>/10
+        </label>
+
+        <input
+          type="range"
+          id="experiencia"
+          name="experiencia"
+          min="0"
+          max="10"
+          step="1"
+          value="5"
+          oninput="document.getElementById('valor-experiencia').textContent = this.value">
+
+      </p>
+
+      <!-- Cor -->
+      <p>
+
+        <label for="cor_camiseta">
+          Cor da camiseta:
+        </label>
+
+        <input
+          type="color"
+          id="cor_camiseta"
+          name="cor_camiseta"
+          value="#1a73e8">
+
+      </p>
+
+      <!-- Select múltiplo -->
+      <p>
+
+        <label for="oficinas">
+          Oficinas de interesse:
+        </label>
+
+        <select
+          id="oficinas"
+          name="oficinas[]"
+          multiple
+          size="4"
+          aria-describedby="info-oficinas">
+
+          <option>Robótica</option>
+          <option>Inteligência Artificial</option>
+          <option>Programação Web</option>
+          <option>Arduino</option>
+          <option>Cybersegurança</option>
+
+        </select>
+
+        <small id="info-oficinas">
+          Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.
+        </small>
+
+      </p>
+
+      <!-- Botão -->
+      <button type="submit">
+        Confirmar inscrição
+      </button>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>
