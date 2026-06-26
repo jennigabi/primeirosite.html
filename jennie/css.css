@@ -1,0 +1,80 @@
+html { 
+  font-size: 16px; 
+} 
+
+body { 
+  font-family: Arial, Helvetica, sans-serif; 
+  margin: 0; 
+  color: #333333; 
+  background-color: #f5f5f5; 
+} 
+
+/* Agrupamento de seletores para evitar repetição */ 
+h1, h2, h3 { 
+  color: #1565c0; 
+} 
+
+/* Agrupamento de seletores para campos de formulário */ 
+input, textarea { 
+  display: block; 
+  width: 100%; 
+  font-size: 1rem; 
+  padding: 0.5em; 
+  margin-top: 4px; 
+  border: 1px solid #999999; 
+  box-sizing: border-box; 
+} 
+
+.cabecalho { 
+  background-color: #1565c0; 
+  padding: 2rem; 
+} 
+
+h1 { 
+  color: #ffffff; 
+  font-size: 2rem; 
+  margin: 0; 
+} 
+
+.subtitulo { 
+  color: #bbdefb; 
+  font-size: 1rem; 
+} 
+
+.menu ul { 
+  list-style: none; 
+  padding: 0; 
+  margin: 1rem 0 0 0; 
+} 
+
+.menu li { 
+  display: inline-block; 
+  margin-right: 1.5rem; 
+} 
+
+/* Seletor descendente: atinge todas as âncoras dentro da navegação */ 
+.menu a { 
+  color: #ffffff; 
+  font-size: 1rem; 
+  text-decoration: none; 
+} 
+
+.secao { 
+  padding: 2rem; 
+  max-width: 60rem; 
+  width: 90%; 
+} 
+
+h2 { 
+  font-size: 1.5rem; 
+} 
+
+/* Irmão adjacente (+) */ 
+h2 + p { 
+  margin-top: 1rem; 
+} 
+
+h3 { 
+  color: #0d47a1; 
+  font-size: 1.25rem; /* Propriedade corrigida */
+}
