@@ -1,13 +1,173 @@
-body {
-  background-color:pink
+/* ==========================
+RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+/* ==========================
+BODY
+========================== */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#0f4c81,#1e88e5,#ff8c42,#ffd166);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* ==========================
+CONTAINER
+========================== */
+
+main{
+    width:100%;
+    max-width:700px;
+}
+
+form{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+TÍTULOS
+========================== */
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
 h1{
-  color:#e072a6
+    color:#0f4c81;
+    text-align:center;
+    margin-bottom:15px;
+    font-size:35px;
 }
-label{
-  color:white
-}
+
 h2{
-  color:white
+    color:#444;
+    text-align:center;
+    font-size:18px;
+    margin-bottom:25px;
+    font-weight:normal;
+}
+
+/* ==========================
+LABELS
+========================== */
+
+label{
+    display:block;
+    margin-bottom:8px;
+    color:#0f4c81;
+    font-weight:bold;
+}
+
+/* ==========================
+INPUTS
+========================== */
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#ff8c42;
+    box-shadow:0 0 10px rgba(255,140,66,0.4);
+}
+
+/* ==========================
+FIELDSET
+========================== */
+
+fieldset{
+    border:2px solid #ff8c42;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+legend{
+    color:#0f4c81;
+    font-weight:bold;
+}
+
+fieldset input{
+    width:auto;
+    margin-right:8px;
+}
+
+/* ==========================
+CHECKBOX
+========================== */
+
+#aceite{
+    width:auto;
+}
+
+/* ==========================
+BOTÕES
+========================== */
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    margin-top:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button[type="submit"]{
+    background:#ff8c42;
+    color:white;
+}
+
+button[type="submit"]:hover{
+    background:#ff6f00;
+    transform:scale(1.03);
+}
+
+button[type="reset"]{
+    background:#0f4c81;
+    color:white;
+}
+
+button[type="reset"]:hover{
+    background:#083358;
+    transform:scale(1.03);
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+    text-align:center;
+    color:white;
+    margin-top:25px;
+    font-size:15px;
+}
+
+footer p{
+    margin:5px 0;
 }
   
