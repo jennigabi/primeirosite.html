@@ -14,8 +14,8 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-    color:#f8fafc;
+    background:linear-gradient(135deg,#12081f,#1b0d2e,#2b1245);
+    color:#f8f5ff;
     line-height:1.7;
 }
 
@@ -30,18 +30,18 @@ header{
 
 header h1{
     font-size:3rem;
-    color:#38bdf8;
+    color:#a855f7;
     margin-bottom:10px;
 }
 
 header h2{
-    color:#cbd5e1;
+    color:#ddd6fe;
     font-weight:normal;
     margin-bottom:15px;
 }
 
 header p{
-    color:#94a3b8;
+    color:#c4b5fd;
 }
 
 hr{
@@ -49,8 +49,8 @@ hr{
     margin:35px auto;
     border:none;
     height:2px;
-    background:#38bdf8;
-    opacity:.3;
+    background:#9333ea;
+    opacity:.4;
 }
 
 /* ==========================
@@ -68,12 +68,12 @@ main{
 ========================== */
 
 section{
-    background:rgba(255,255,255,.05);
+    background:rgba(95,30,160,.18);
     backdrop-filter:blur(10px);
     padding:30px;
     border-radius:18px;
     margin:30px 0;
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
     transition:.4s;
 }
 
@@ -82,14 +82,14 @@ section:hover{
 }
 
 section h2{
-    color:#38bdf8;
+    color:#c084fc;
     margin-bottom:20px;
-    border-left:5px solid #38bdf8;
+    border-left:5px solid #9333ea;
     padding-left:10px;
 }
 
 section h3{
-    color:#e2e8f0;
+    color:#ede9fe;
     margin-top:20px;
 }
 
@@ -102,8 +102,8 @@ img{
     margin:auto;
     width:220px;
     border-radius:50%;
-    border:6px solid #38bdf8;
-    box-shadow:0 0 30px rgba(56,189,248,.5);
+    border:6px solid #9333ea;
+    box-shadow:0 0 30px rgba(147,51,234,.6);
     transition:.5s;
 }
 
@@ -128,7 +128,7 @@ li{
 ========================== */
 
 a{
-    color:#38bdf8;
+    color:#c084fc;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
@@ -146,13 +146,13 @@ a:hover{
 footer{
     text-align:center;
     padding:40px 20px;
-    background:#020617;
+    background:#0b0514;
     margin-top:50px;
 }
 
 footer p{
     margin:10px 0;
-    color:#94a3b8;
+    color:#c4b5fd;
 }
 
 /* ==========================
@@ -177,4 +177,4 @@ img{
     width:170px;
 }
 
-}
+   }
