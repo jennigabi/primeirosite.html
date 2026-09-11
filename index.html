@@ -1,289 +1,98 @@
 <!DOCTYPE html>
+<!-- ============================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
 <html lang="pt-BR">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Jenifer — Programação Web 1
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — jenifer gabriele</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
+  <div class="pagina">
 
-    <!-- ========================= -->
-    <!-- CABEÇALHO -->
-    <!-- ========================= -->
-
-    <header>
-
-        <h1>
-            	Jenifer Gabriele
-        </h1>
-
-        <h2>
-            Técnico em Desenvolvimento de Sistemas — IFAL
-        </h2>
-
-        <p>
-            Página principal das atividades de Programação Web 1.
-        </p>
-
-        <hr>
-
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>jenifer gabriele alves da silva </h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </header>
 
-    <!-- ========================= -->
-    <!-- CONTEÚDO PRINCIPAL -->
-    <!-- ========================= -->
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p>meu nome é jenifer e estudo no ifal no curso de desenvolvimente de sistemas</p>
+      </section>
 
-    <main>
-
-        <!-- FOTO -->
-        <section>
-
-            <img src="eu.webp"
-                 alt="Foto de jenifer"
-                 width="220"
-                 style="display:block; margin:20px auto;">
-
-        </section>
-
-        <!-- DADOS PESSOAIS -->
-        <section>
-
-            <h2>
-                Informações Pessoais
-            </h2>
-
-            <h3>
-                Data de nascimento
-            </h3>
-
-            <p>
-                24 de julho de  2009
-            </p>
-
-            <h3>
-                Descrição pessoal
-            </h3>
-
-            <p> Olá meu nome é jenifer,sou estudante do IFAL do curso desenvolvimento de sistemas,
-               quando não estou programando gosto de ler livros e assistir séries e filmes.
-            </p>
-
-        </section>
-
-        <hr>
-
-        <!-- CONHECIMENTOS -->
-        <section>
-
-            <h2>
-                Conhecimentos na Área
-            </h2>
-
-            <ul>
-
-                <li>
-                    Desenvolvimento de Sistemas
-                </li>
-
-                <li>
-                    Programação Web
-                </li>
-             
-               <li> 
-                  básico de informatica 
-               </li>
-               
-            
-
-            </ul>
-
-        </section>
-
-        <hr>
-
-        <!-- LINK DO CURSO -->
-        <section>
-
-            <h2>
-                Curso Técnico no IFAL
-            </h2>
-
-            <p>
-                Estou realizando o curso Técnico em Desenvolvimento
-                de Sistemas no Instituto Federal de Alagoas (IFAL).
-            </p>
-
-            <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas"
-               target="_blank">
-
-                Saiba mais sobre o curso de Desenvolvimento de Sistemas no IFAL
-
-            </a>
-
-        </section>
-
-        <hr>
-
-        <!-- ========================= -->
-        <!-- CAPÍTULO 4 -->
-        <!-- ========================= -->
-
-        <section>
-
-            <h2>
-                Capítulo 4 — Tabelas, Listas e Multimídia
-            </h2>
-
-            <nav aria-label="Atividades do Capítulo 4">
-
-                <ul>
-
-                    <li>
-                        <a href="cap04/at01.html">
-                            AT01 — Tabela Básica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap04/at02.html">
-                            AT02 — Tabela Semântica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap04/at03.html">
-                            AT03 — Listas Avançadas
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap04/at04.html">
-                            AT04 — Página Multimídia
-                        </a>
-                    </li>
-                </ul>
-
-            </nav>
-
-        </section>
-
-        <hr>
-
-        <!-- ========================= -->
-        <!-- CAPÍTULO 5 -->
-        <!-- ========================= -->
-
-        <section>
-
-            <h2>
-                Capítulo 5 — Formulários HTML
-            </h2>
-
-            <nav aria-label="Atividades do Capítulo 5">
-
-                <ul>
-
-                    <li>
-                        <a href="cap05/at01.html">
-                            AT01 — Formulário de Contato
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at02.html">
-                            AT02 — Cadastro de Usuário
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at03.html">
-                            AT03 — Matrícula Acadêmica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at04.html">
-                            AT04 — Inscrição em Evento
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cap05/at05.html">
-                            AT05 — Pesquisa Acadêmica
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </section>
-
-    <section>
-
-        <h2>
-      CSS - estilização com CSS
-        </h2>
-         <nav aria-label="Atividade CSS">
-             <ul>
-                 <li>
-                     <a href="HOTEL/index.html">
-                         trabalho com CSS em dupla
-                         
-                     </a>
-                 </li>
-
-                 <li>
-                     <a href="jennie/index.html">
-                         trabalho css 
-                     </a>
-                 </li>
-             </ul>
-             
-
-
-        
-    </section>
-
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+            <p>O que é e o que você fez. TROQUE por um projeto seu.</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+            <p>projeto para uma pagina de vendas </p>
+            <a href="empadamaredoce.github.io">projeto de vendas   </a>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 3</h3>
+            <p>Descrição curta do projeto.</p>
+          </article>
+        </div>
+      </section>
     </main>
-    
 
-    <!-- ========================= -->
-    <!-- RODAPÉ -->
-    <!-- ========================= -->
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
 
-    <footer>
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="mailto:jgas12@aluna.ifal.edu.br">jgas12@aluna.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/jennigabi">github.com/jennigabi</a></li>
+        </ul>
+      </section>
+    </aside>
 
-        <hr>
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 jenifer gabriele  · feito com HTML + CSS Grid</footer>
 
-        <p>
-            Feito por Jenifer Gabriele — Programação Web 1
-        </p>
-
-        <p>
-            Turma: 911C
-        </p>
-
-        <p>
-            Curso: Desenvolvimento de Sistemas
-        </p>
-
-        <p>
-            Desenvolvido no VS Code
-        </p>
-
-        <p>
-            Maceió - AL
-        </p>
-
-    </footer>
-
+  </div>
 </body>
 
 </html>
